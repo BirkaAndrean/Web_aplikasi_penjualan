@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman Login</title>
+  <style>
+    /* Tambahkan CSS langsung jika file eksternal tidak tersedia */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
+    .login-container h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .login-container form {
+      display: flex;
+      flex-direction: column;
+    }
+    .login-container label {
+      margin-bottom: 5px;
+      text-align: left;
+      color: #666;
+    }
+    .login-container input {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .login-container button {
+      padding: 10px;
+      background-color: #1E90FF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .login-container button:hover {
+      background-color: #147ae8;
+    }
+    .login-container a {
+      color: #1E90FF;
+      text-decoration: none;
+    }
+    .login-container a:hover {
+      text-decoration: underline;
+    }
+    #errorMessage {
+      color: red;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm" action="#" method="POST">
+      <label for="username">Username atau Email:</label>
+      <input type="text" id="username" name="username" placeholder="Masukkan username/email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+      
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="index1.html">Login free</a>
+        <button type="submit">Login</button>
+      </div>
+    </form>
+    <p id="errorMessage"></p>
+    <p><a href="#">Lupa Password?</a> | <a href="#">Buat Akun</a></p>
+  </div>
+  <script>
+    const loginForm = document.getElementById('loginForm');
+    const errorMessage = document.getElementById('errorMessage');
+
+    loginForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (username === '' || password === '') {
+        errorMessage.textContent = 'Username dan password wajib diisi!';
+      } else {
+        errorMessage.textContent = '';
+        alert('Login berhasil!');
+      }
+    });
+  </script>
+</body>
+</html>
