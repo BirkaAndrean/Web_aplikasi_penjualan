@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Transaksi</title>
+    <style>
+        /* Reset default margin dan padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1E90FF;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #1E90FF;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+        }
+
+        main {
+            background: #fff;
+            padding: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        input[type="text"], input[type="number"], select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #1E90FF;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #187bcd;
+        }
+
+        a {
+            text-decoration: none;
+            color: #1E90FF;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsif untuk layar kecil */
+        @media (max-width: 768px) {
+            main {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            header, footer {
+                padding: 10px;
+            }
+
+            button {
+                padding: 12px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Transaksi</h1>
+    </header>
+
+    <main>
+        <h2>Buat Transaksi Baru</h2>
+
+        <form action="" method="post">
+            <label for="nama">Nama Transaksi</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama transaksi" required>
+
+            <label for="jumlah">Jumlah</label>
+            <input type="number" id="jumlah" name="jumlah" placeholder="Masukkan jumlah" min="1" required>
+
+            <label for="kategori">Kategori</label>
+            <select id="kategori" name="kategori">
+                <option value="Elektronik">Elektronik</option>
+                <option value="Pakaian">Pakaian</option>
+                <option value="Makanan">Makanan</option>
+                <option value="Aksesoris">Aksesoris</option>
+            </select>
+
+            <button type="submit">Simpan</button>
+        </form>
+
+        <p><a href="index6.html">Lihat Daftar Transaksi</a></p>
+        <p><a href="index1.html">Halaman utama</a></p>
+    </main>
+
+    <footer>
+        <p>@Drexone - Store | Semua Hak Dilindungi</p>
+    </footer>
+
+</body>
+</html>
